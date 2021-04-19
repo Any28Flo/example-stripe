@@ -1,0 +1,11 @@
+import React from 'react';
+
+const  Payments = (props) => {
+      return (
+            <div>
+                 <h2>Payments</h2> 
+            </div>
+      );
+}
+
+export default Payments;

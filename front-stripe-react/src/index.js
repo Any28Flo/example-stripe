@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
+
+import { BrowserRouter as Router} from 'react-router-dom';
 
 export const stripePromise = loadStripe(
   "pk_test_51IhDBSCsyiOaFA5zh4PO9uPtC6fJWpV3PSHvobl7rIE6F9n7ULFb4guzDhgCh6A3l9iWxpVwFzAGzRRRDp4heCFL00IFiEcV7i"
@@ -14,7 +15,9 @@ export const stripePromise = loadStripe(
 ReactDOM.render(
   <React.StrictMode>
     <Elements stripe={stripePromise}>
+    <Router>
       <App />
+      </Router>
     </Elements>
   </React.StrictMode>,
   document.getElementById('root')
