@@ -1,44 +1,80 @@
 import React from 'react';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
-import {Link} from 'react-router-dom';
-const Navigation =(props) =>{
+import {NavLink} from 'react-router-dom';
+
+const Navigation = () => {
     return (
         <nav>
             <ul className="navbar-nav">
                 <li>
-                    <Link to="/home">Home</Link>
+                    <NavLink
+                        activeStyle={{
+                            fontWeight: "bold",
+                            color: "red"
+                        }}
+                        to="/home"
+                    >
+                        Home
+                    </NavLink>
                 </li>
                 <li>
-                    <Link to="/checkout">
-                <span aria-label="emoji" role="img">
-                  🛒
-                </span>{' '}
+
+                    <NavLink
+                        activeStyle={{
+                            fontWeight: "bold",
+                            color: "red"
+                        }}
+                        to="/checkout"
+                    >
+                        <span aria-label="emoji" role="img">
+                            🛒
+                        </span>{' '}
                         Checkout
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link to="/payments">
-                <span aria-label="emoji" role="img">
-                  💸
-                </span>{' '}
+
+                    <NavLink
+                        activeStyle={{
+                            fontWeight: "bold",
+                            color: "red"
+                        }}
+                        to="/payments"
+                    >
+                        <span aria-label="emoji" role="img">
+                            💸
+                        </span>{' '}
                         Payments
-                    </Link>
+                    </NavLink>
+
                 </li>
                 <li>
-                    <Link to="/customers">
-                <span aria-label="emoji" role="img">
-                  🧑🏿‍🤝‍🧑🏻
-                </span>{' '}
+                    <NavLink
+                        activeStyle={{
+                            fontWeight: "bold",
+                            color: "red"
+                        }}
+                        to="/customers"
+                    >
+                        <span aria-label="emoji" role="img">
+                            🧑🏿‍🤝‍🧑🏻
+                        </span>{' '}
                         Customers
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link to="/subscriptions">
-                <span aria-label="emoji" role="img">
-                  🔄
-                </span>{' '}
+                    <NavLink
+                        activeStyle={{
+                            fontWeight: "bold",
+                            color: "red"
+                        }}
+                        to="/subscriptions"
+                    >
+                        <span aria-label="emoji" role="img">
+                            🔄
+                        </span>{' '}
                         Subscriptions
-                    </Link>
+                    </NavLink>
                 </li>
             </ul>
         </nav>
