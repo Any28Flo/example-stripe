@@ -7,7 +7,7 @@ import Home from "./components/Home/Home";
 import Customers from "./components/Customers/Customers";
 import Payments from "./components/Payments/Payments";
 import Suscriptions from "./components/Suscriptions/Suscriptions";
-
+import Checkout from "./components/Checkout/Checkout";
 const  App = ()=> {
   return (
       <>
@@ -17,7 +17,7 @@ const  App = ()=> {
                 <Home/>
             </Route>
             <Route path="/checkout">
-              <Home/>
+              <Checkout/>
             </Route>
             <Route path="/payments">
               <Payments/>
@@ -28,6 +28,7 @@ const  App = ()=> {
             <Route path="/subscriptions">
                <Suscriptions/>
             </Route>
+
           </Switch>
       </>
   );
